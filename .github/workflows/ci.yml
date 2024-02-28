@@ -24,10 +24,9 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: coursier/cache-action@v6.3
-      - uses: VirtusLab/scala-cli-setup@main
+      - uses: jodersky/setup-mill@master
         with:
-          power: true
+          mill-version: 0.11.7
       - uses: taiki-e/install-action@just
       - run: just package
       - name: Setup Pages
