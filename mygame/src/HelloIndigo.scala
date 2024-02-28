@@ -52,6 +52,7 @@ object HelloIndigo extends IndigoSandbox[Unit, Model] {
           println("right click - dont' fire")
           Outcome(model.copy(center = e.position))
 
+
         case MouseButton.LeftMouseButton =>
           val clickPoint = e.position
           val adjustedPosition = clickPoint - model.center
